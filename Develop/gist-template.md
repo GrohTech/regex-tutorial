@@ -1,13 +1,25 @@
 # RegEx Tutorial
 
-If you've ever seen "RegEx" in a project, you might be wondering what that even means. It stands for "Regular Expression", which is basically a curated search pattern used to match strings.
+If you've ever seen "RegEx" in a project, you might be wondering what that even means. It stands for "Regular Expression", which is basically a curated search pattern used to match strings for a particular reason.
 
 ## Summary
 
-Let's go over the regex to match an email. The most likely reason to do this would be to validate a new user's email address to be used for logging in to an application.
+Let's go over a RegEx to match an email. 
 
-Here is the RegEx you'll be working toward:
-('[a-z0-9]+@[a-z]+\.edu\.[a-z]{2,3}')
+You might be asking why that would be necessary. One reason would be to validate a new user's email address before it gets added to the database. 
+
+A second step in this process might be to send a validation email, but to do that, you want to make sure that email gets sent to a real email address, which brings us back to creating a RegEx to match an email.
+
+Here is the RegEx we'll be breaking down:
+```
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+```
+
+First, come up with a few examples of email addresses:
+
+email@email.com
+Email336@school.edu
+fox_Searcher-4901@govjob.gov
 
 Here are some questions you might ask yourself before building your RegEx:
 
@@ -17,7 +29,6 @@ Here are some questions you might ask yourself before building your RegEx:
 4. Will there be numbers to account for - if so, are all numbers acceptable? 
 
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
 ## Table of Contents
 
@@ -39,6 +50,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Quantifiers
 
+Pro-tip:
+Add the below RegEx to match before or after something specific to match ANYTHING else. 
+.*
+For example, if you wanted to search for 
+
 ### OR Operator
 
 ### Character Classes
@@ -59,4 +75,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Hi All! I'm Lauren! Right now, I'm powering through the University of Wisconsin - Extended Campus Full Stack Coding Bootcamp. 
+
+Please don't hesitate to reach out!
+
+- [GitHub](https://github.com/GrohTech)
