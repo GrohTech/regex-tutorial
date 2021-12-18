@@ -15,3 +15,5 @@ JavaScript Tutorial: Anchors https://www.javascripttutorial.net/regular-expressi
 Javascript.info: Quantifiers https://javascript.info/regexp-quantifiers
 
 JavaScript.info: Character Classes https://javascript.info/regexp-character-classes
+
+JavaScript.info: Capturing Groups https://javascript.info/regexp-groups
