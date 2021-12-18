@@ -10,18 +10,27 @@ You might be asking why that would be necessary. One reason would be to validate
 
 A second step in this process might be to send a validation email, but to do that, you want to make sure that email gets sent to a real email address, which brings us back to creating a RegEx to match an email.
 
-Here is the RegEx we'll be breaking down:
+**Here is the RegEx we'll be breaking down:**
 ```
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ```
 
-First, come up with a few examples of email addresses:
+
+**First, come up with a few examples of email addresses:**
 
 email@email.com
 Email336@school.edu
 fox_Searcher-4901@govjob.gov
 
-Here are some questions you might ask yourself before building your RegEx:
+**Let's break up one email address into pieces:**
+
+| 1 | 2 | 3 | 4 | 5 |
+| :--: | :--: | :--: | :--: | :--: |
+| fox_Searcher-4901 | @ | govjob | . | gov |
+| all letters and numbers, underscores, slashes, dots, hyphens, match as many times as possible | must be an @ symbol | not a digit, all letters, periods, hyphens, match as many times as possible | must be a period | all letters, periods, length must be between 2 and 6 characters |
+| ([a-z0-9_\.-]+) | @ | ([\da-z\.-]+) | \. | ([a-z\.]{2,6}) | 
+
+**Here are some questions you might ask yourself before building your RegEx:**
 
 1. Will I need to include any special characters - if so, which ones?
 2. Will letters be included - if so, will they be uppercase, lowercase, or both?
