@@ -27,7 +27,7 @@ fox_Searcher-4901@govjob.gov
 | 1 | 2 | 3 | 4 | 5 |
 | :--: | :--: | :--: | :--: | :--: |
 | fox_Searcher-4901 | @ | govjob | . | gov |
-| all letters and numbers, underscores, slashes, dots, hyphens, match as many times as possible | must be an @ symbol | not a digit, all letters, periods, hyphens, match as many times as possible | must be a period | all letters, periods, length must be between 2 and 6 characters |
+| all letters (a-z), all numbers (0-9), underscores, slashes, dots, hyphens, match as many times as possible | must be an @ symbol | all digits (0-9), all letters (a-z), periods, hyphens, match as many times as possible | must be a period | all letters, periods, length must be between 2 and 6 characters |
 | ([a-z0-9_\.-]+) | @ | ([\da-z\.-]+) | \. | ([a-z\.]{2,6}) | 
 
 **Here are some questions you might ask yourself before building your RegEx:**
@@ -57,12 +57,63 @@ fox_Searcher-4901@govjob.gov
 
 ### Anchors
 
+As opposed to other pieces of a RegEx sequence that match characters, anchors match positions of text within a string.
+
+**Caret anchor**
+
+The caret anchor matches the beginning of the text within a string. You might use this to check for one specific character at the beginning of a string.
+``` 
+^ 
+```
+
+**Dollar anchor**
+
+The dollar anchor matches the end of the text within a string. You might use this to check for one specific character at the end of a string.
+```
+$
+```
+
+**Caret and Dollar anchor combination**
+
+Often, the caret and dollar anchors are used in combination - as it is in our email match example - to check if a whole string matches a pattern.
+
+In the below RegEx example, you could search for strings of time that mactch an exact pattern. 
+
+Specifically, you'd start by checking for any digit, followed by any digit, followed by a colon, followed by any digit, and ending with any digit.
+```
+/^\d\d:\d\d$/
+```
+
 ### Quantifiers
 
-Pro-tip:
-Add the below RegEx to match before or after something specific to match ANYTHING else. 
-.*
-For example, if you wanted to search for 
+Quantifiers check for the quantity of a string or a piece of a string.
+
+
+**Quantity**
+
+Measures how many of a certain character are needed.
+```
+{n}
+```
+
+In the below RegEx example, you'll check strings of phone numbers for grouped digits. 
+
+Specifically, you'll check for 3 digits, followed by a hyphen, followed by 3 digits, followed by a hyphen, followed by 4 digits.
+```
+/^(\d{3})-(\d{3})-(\d{4})$/
+```
+
+**Shorthands**
+
+A commonly-used quantifier, meaning "one or more":
+```
++
+```
+
+A commonly-used quantifier, meaning "zero or more":
+```
+*
+```
 
 ### OR Operator
 
