@@ -5,10 +5,6 @@
 This is a tutorial of a RegEx for an email match. We'll break the example into pieces and discuss anchors, quantifiers, character classes, capturing groups, and bracket expressions.
 
 See the gist, here: [RegEx Tutorial GitHub gist](https://gist.github.com/GrohTech/87bb754a791746217658de822f36ad00)
-  
-## Table of Contents 
-* [Credits](#credits)
-* [Questions](#questions)
 
 ## Credits
 
