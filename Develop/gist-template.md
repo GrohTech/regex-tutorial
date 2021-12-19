@@ -108,9 +108,9 @@ Returning to the "matching an email" example, let's see how we'd break down a re
 
 **First, come up with a few examples of email addresses:**
 
-email@email.com
-Email336@school.edu
-fox_Searcher-4901@govjob.gov
+1. email@email.com
+2. Email336@school.edu
+3. fox_Searcher-4901@govjob.gov
 
 **Let's break up one email address into pieces:**
 
